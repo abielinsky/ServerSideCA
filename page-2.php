@@ -35,6 +35,12 @@
               <li class="nav-item">
                 <a class="nav-link" aria-current="page" href="page-3.php">Page 3</a>
               </li>
+
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="contact.php">CONTACT</a>
+              </li>
+
             </ul>
           </span>
         </div>
