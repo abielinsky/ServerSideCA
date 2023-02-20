@@ -1,63 +1,10 @@
-<!doctype html>
-
-
-<html lang="en">
-
-<head>
-    
 <?php include 'includes/header.php'; ?>
 
-    <!-- Bootstrap core CSS -->
-<link href="css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom styles for this template -->
-    <link href="mystyle.css" rel="stylesheet">
-  </head>
-
-
-
-  <body>
-    
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Eighth navbar example">
-      <div class="container">
-        <a class="navbar-brand" href="index.php">Site Title</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-  
-        <div class="collapse navbar-collapse" id="navbarsExample07">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          </ul>
-          <span class="d-flex">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="page-1.php">Page 1</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="page-2.php">Page 2</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="page-3.php">Page 3</a>
-              </li>
-
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="contact.php">CONTACT</a>
-              </li>
-
-            </ul>
-          </span>
+    <main class="container">
+        <div class="starter-template text-center">
+            <h1>Bootstrap starter template</h1>
+            <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
         </div>
-      </div>
-    </nav>
+    </main><!-- /.container -->
 
-<main class="container">
-  
-  <div class="starter-template text-center">
-    <h1>Bootstrap starter template</h1>
-    <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
-  </div>
-
-</main><!-- /.container -->
-    <script src="js/bootstrap.bundle.min.js"></script>
-  </body>
-</html>
+<?php include 'includes/footer.php'; ?>
