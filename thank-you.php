@@ -57,8 +57,9 @@
     <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
   
 
-    <h1>Thank you!</h1>
-     Thank you for submitting the form. We will contact you soon!
+    <h1 class="mt-10" > Thank you! </h1>
+     
+    Thank you for submitting the form. We will contact you soon!
 
   
   </div>
