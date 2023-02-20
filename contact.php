@@ -20,10 +20,12 @@
 
         <p>
         <label for="phone">Enter a phone number:</label><br><br>
-        <input type="tel" name="phone" 
-        placeholder="123-45-678" 
+        <input type="tel" name="phone"
         required><br><br>
         </p>
+
+          
+
 
         <p>
         <label for='message'>Message:</label> <br>
