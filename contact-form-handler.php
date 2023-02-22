@@ -10,6 +10,7 @@ if(empty($_POST['name'])  ||
     $errors .= "\n Error: all fields are required";
 }
 
+$headers = '';
 // Important: Create email headers to avoid spam folder
 $headers .= 'From: '.$myemail."\r\n".
     'Reply-To: '.$myemail."\r\n" .
