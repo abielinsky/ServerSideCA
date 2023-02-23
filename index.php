@@ -3,12 +3,9 @@
 require_once('database.php');
 
 // create a PDO instance and initialize $db
-/// initialize $db because it represents a database connection, which is required to interact with the database using PHP.
-///  Without initializing $db, you won't be able to perform any database operations like querying data, inserting data,
-///  updating data, or deleting data.
 try {
     $host = 'localhost';
-    $dbname = 'guitar_shop';
+    $dbname = 'restaurant';
     $username = 'root';
     $password = '';
 
@@ -20,27 +17,26 @@ try {
     exit;
 }
 
-// Get products
-$queryProducts = 'SELECT * FROM products';
-$statement = $db->prepare($queryProducts);
+// Get branches
+$queryBranches = 'SELECT * FROM branch';
+$statement = $db->prepare($queryBranches);
 $statement->execute();
-$products = $statement->fetchAll();
+$branches = $statement->fetchAll();
 $statement->closeCursor();
 
 ?>
 
 <!DOCTYPE html>
 <html>
-
         <head>
             <?php include 'includes/header.php'; ?>
         </head>
 
         <body>
-        <header>
-            <h1>Product Manager</h1>
             
-        </header>
+            <header>
+            <h1>Branch Manager</h1>
+            </header>
 
             <main class="container">
 
@@ -50,32 +46,36 @@ $statement->closeCursor();
                 </div>
 
 
-                <h1>Product List</h1>
+                <h1>Branch List</h1>
                 <section>
                 <!-- display a table-->
                 <table>
                     <tr>
-                        <th>Code</th>
+                        <th>ID</th>
                         <th>Name</th>
-                        <th>Price</th>
-                        <th>Brand</th>
-                        <th>Discount</th>
+                        <th>Manager</th>
+                        <th>Telephone</th>
+                        <th>Address</th>
+                        <th>Established</th>
                         <th>Delete</th>
                     </tr>
 
-                    <?php foreach ($products as $product) : ?> 
+                    <?php foreach ($branches as $branch) : ?> 
                     <tr>
-                        <td><?php echo $product['productCode']; ?></td>
-                        <td><?php echo $product['productName']; ?></td>
-                        <td class="right"><?php echo $product['listPrice']; ?></td>
-                        <td><?php echo $product['brand']; ?></td>
-                        <td class="right"><?php echo $product['discount'] . '%'; ?></td>
-                    
-                        <td><form action="delete_product.php" method="post">
-                            <input type="hidden" name="product_id"
-                                value="<?php echo $product['productID']; ?>">
+                        <td><?php echo $branch['Branch_Id']; ?></td>
+                        <td><?php echo $branch['Branch_Name']; ?></td>
+                        <td><?php echo $branch['Manager_Name']; ?></td>
+                        <td><?php echo $branch['Telephone']; ?></td>
+                        <td><?php echo $branch['Address_Line1'] . ', ' . $branch['Address_Line2'] . ', ' . $branch['Address_Line3'] . ', ' . $branch['Eircode']; ?></td>
+                        <td><?php echo $branch['Established']; ?></td>
+                       
+                        <td>
+                            <form action="delete_branch.php" method="post">
+                            <input type="hidden" name="branch_id"
+                            value="<?php echo $branch['Branch_Id']; ?>">
                             <input type="submit" value="Delete">
-                        </form></td>
+                            </form>
+                        </td>
                     </tr>
                     <?php endforeach; ?>
                 </table>
