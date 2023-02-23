@@ -6,7 +6,7 @@
     <h1>CONTACT</h1>
     <p class="lead">THE CONTACT FORM WILL BE HERE 
 
-
+ 
 
         <form method="POST" name="contactform" action="contact-form-handler.php"> 
         <p>
