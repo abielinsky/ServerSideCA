@@ -64,3 +64,30 @@ INSERT INTO OrderDetails (OrderID, ItemID, Quantity) VALUES
 (3, 4, 1),
 (3, 9, 2),
 (4, 5, 2);
+
+
+
+
+create table Branch ( Branch_Id   int NOT NULL AUTO_INCREMENT,
+					  Branch_Name     VARCHAR(50),
+					  Manager_Name    VARCHAR(100),
+					  Telephone       VARCHAR(15),
+					  Address_Line1   VARCHAR(200),
+					  Address_Line2   VARCHAR(200),
+					  Address_Line3   VARCHAR(200),
+					  Eircode         VARCHAR(8),			
+					  Established     DATE  ,			  
+PRIMARY KEY (Branch_Id));
+
+
+INSERT INTO Branch VALUES 
+("1",  "KFC Jervis",           "Jack Black",     "894148673","125 Abbey Street Upper", 	"North Dublin",     "Co. Dublin",  "D01 W3X5",     '2020/08/11'),                                             
+("2",  "KFC Applegreen",       "Ryan Gosling",   "894149241","Demsesne",					"Dundalk",		    "Co. Louth",   "A94 R178", '2021/10/12'),
+("3",  "KFC Dundalk Road",     "Amy Winehouse",  "894149809","Dundalk Rd", 				"Drogheda", 	    "Co. Louth",   "A42 A241",     '2020/10/13'),
+("4",  "KFC Marshes",          "Andrew Garfield","874150377","Marshes Lower", 			"Dundalk",		    "Co. Louth",   "Z11 H463",     '1995/04/14'),
+("5",  "KFC Drogheda",         "Jason Bourne",   "874180945","Park Ln",				    "Drogheda",		    "Co. Louth",   "N35 T785",     '2008/10/15'),
+("6",  "KFC Galway City",   	 "Johnny Depp",    "874211513","Meadow Rd", 				"Galway City",      "Co. Galway",  "P24 J445", '2001/04/16'),
+("7",  "KFC Castlebellingham", "Ariana Grande",  "874242081","Upper Heights",				"Castlebellingham", "Co. Louth",   "M46 W352", '2008/02/17'),
+("8",  "KFC Ballymahon",       "Marylin Monroe", "874272649","Stallion Ave", 				"Ballymahon", 		"Co. Lonford", "J35 R456", '2007/10/18'),
+("9",  "KFC Long Walk",        "Frank Sinatra",  "874303217","The Long Walk",				"Dundalk",			"Co. Louth",   "X33 X683", '2018/10/19'),
+("10", "KFC Ravensdale",       "Billy Benson",   "894153785","Lumpers Rd", 				"Ravensdale", 		"Co. Louth",   "Z24 O757",     '2015/02/10');

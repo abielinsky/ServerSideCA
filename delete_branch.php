@@ -23,7 +23,7 @@ if (!$success) {
 }
 
 // Display the Product List page
-include('index.php');
+include('page-1.php');
 
 exit();
 ?>

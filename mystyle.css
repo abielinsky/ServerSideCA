@@ -1,1 +1,74 @@
-/* Add your own CSS under here */
+/* Base table styles */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 14px;
+  }
+  
+  th,
+  td {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  tr:hover {
+    background-color: #ddd;
+  }
+  
+  /* Responsive table styles */
+  @media screen and (max-width: 767px) {
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  
+    thead {
+      display: none;
+    }
+  
+    tbody {
+      display: block;
+    }
+  
+    tr {
+      display: block;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+    }
+  
+    td {
+      display: block;
+      text-align: center;
+      font-size: 14px;
+      border-bottom: 1px solid #ddd;
+      position: relative;
+      padding-left: 50%;
+    }
+  
+    td:before {
+      content: attr(data-label);
+      position: absolute;
+      left: 0;
+      width: 50%;
+      padding-left: 8px;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-align: left;
+    }
+  
+    td:last-child {
+      border-bottom: none;
+    }
+  }
+  
