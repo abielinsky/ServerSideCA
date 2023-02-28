@@ -5,6 +5,10 @@ $myemail = 'd00251844@student.dkit.ie';// <-----Put your DkIT email address here
 if(empty($_POST['name'])  ||
    empty($_POST['email']) ||
    empty($_POST['phone']) ||
+   empty($_POST['terms']) ||
+   empty($_POST['birthdate']) ||
+   empty($_POST['gender']) ||
+   empty($_POST['country']) ||
    empty($_POST['message']))
 {
     $errors .= "\n Error: all fields are required";
@@ -21,6 +25,10 @@ $name = $_POST['name'];
 $email_address = $_POST['email'];
 $phone = $_POST['phone'];
 $message = $_POST['message'];
+$message = $_POST['terms'];
+$birthdate = $_POST['birthdate'];
+$birthdate = $_POST['gender'];
+$country = $_POST['country'];
 
 if (!preg_match(
 "/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/i",
@@ -37,8 +45,12 @@ if( empty($errors))
         " Here are the details:\n 
         
         Name: $name \n 
+        birthdate: $birthdate \n 
         Email: $email_address \n 
         phone: $phone \n 
+        terms: $terms \n 
+        gender: $gender \n 
+        country: $country \n 
         Message \n $message";
 
         mail($to,$email_subject,$email_body,$headers);

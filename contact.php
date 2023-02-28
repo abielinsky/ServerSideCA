@@ -9,10 +9,27 @@
  
 
         <form method="POST" name="contactform" action="contact-form-handler.php"> 
+        
         <p>
         <label for='name'>Your Name:</label> <br>
         <input type="text" name="name">
         </p>
+
+        <p>
+        <label for="birthdate">Birthdate:</label> <br>
+			  <input type="date" id="birthdate" name="birthdate"><br><br>
+        </p>
+
+        <p>
+        <label for="gender">Gender:</label> <br>
+			<select id="gender" name="gender">
+				<option value="">--Please choose an option--</option>
+				<option value="male">Male</option>
+				<option value="female">Female</option>
+				<option value="other">Other</option>
+			</select><br><br>
+        </p>
+
         <p>
         <label for='email'>Email Address:</label> <br>
         <input type="text" name="email"> <br>
@@ -24,6 +41,34 @@
         required><br><br>
         </p>
 
+        <p>
+        <label for="country">Country:</label>   <br>
+			<input type="text" id="country" name="country" list="country-list">
+			<datalist id="country-list">
+				<option value="Ireland">
+				<option value="Canada">
+				<option value="Mexico">
+				<option value="Japan">
+				<option value="China">
+        <option value="Denmark">
+        <option value="Norway">
+        <option value="Iceland">
+        <option value="Peru">
+        <option value="Guatemala">
+        <option value="China">
+				<option value="Brazil">
+			</datalist><br><br>
+        </p>
+
+
+
+        <p>
+        <label for="terms">Agree to terms and conditions:</label>
+			  <input type="checkbox" id="terms" name="terms" required><br><br>
+        </p>
+
+
+
 
 
 
@@ -33,6 +78,11 @@
         </p>
         <input type="submit" value="Submit"><br>
         </form>
+
+
+
+
+
 
         <br> All you get is this text and a mostly barebones HTML document.</p>
   </div>
