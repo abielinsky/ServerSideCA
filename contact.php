@@ -6,8 +6,6 @@
     <h1>CONTACT</h1>
     <p class="lead">THE CONTACT FORM WILL BE HERE 
 
- 
-
         <form method="POST" name="contactform" action="contact-form-handler.php"> 
         
         <p>
@@ -36,7 +34,7 @@
         </p>
 
         <p>
-        <label for="phone">Enter a phone number:</label><br><br>
+        <label for="phone">Enter a phone number:</label> <br>
         <input type="tel" name="phone"
         required><br><br>
         </p>
@@ -76,9 +74,21 @@
         <label for='message'>Message:</label> <br>
         <textarea name="message"></textarea>
         </p>
-        <input type="submit" value="Submit"><br>
-        </form>
 
+        <p>
+        <label for="datetime">Date and time:</label> <br>
+		    <input type="datetime-local" id="datetime" name="datetime"><br><br>
+        </p>
+
+        <p>
+        <label for="file">Upload file:</label> <br>
+			  <input type="file" id="file" name="file"><br><br>
+        </p>
+
+
+        <input type="submit" value="Submit"> <br>
+        </form>
+    
 
 
 
