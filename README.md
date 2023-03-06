@@ -2,10 +2,10 @@
 
 
 
-This is a sample project that demonstrates how to use PHP, HTML, 
-and SQL together to build a simple web application. 
+This is a sample project that demonstrates how to use `PHP, HTML, 
+and SQL` together to build a simple web application. 
 The application allows users to create and manage tasks using a 
-MySQL database.
+MySQL database table.
 
 ## <a href="#" class="button big">Getting Starter</a>
 
@@ -21,7 +21,7 @@ Once you have everything set up, you should be able to
 access the web application by visiting `http://localhost/` 
 in your web browser.
 
-## Features
+## <a href="#" class="button big">Features</a>
 
 This project includes the following features:
 
@@ -30,7 +30,7 @@ tables on the website.
 - Responsive design: The web application is designed to be 
 responsive and work well on mobile devices.
 
-## Technologies Used
+## <a href="#" class="button big">Technologies Used </a>
 
 This project uses the following technologies:
 
@@ -40,18 +40,47 @@ This project uses the following technologies:
 - [![View PHP](https://img.shields.io/badge/HTML/CSS:-blue.svg)]() Used to create the user interface.
 - [![View PHP](https://img.shields.io/badge/MySQL:-blue.svg)]() Used to store data tables information.
 
-## Contributing
+## <a href="#" class="button big">Contributing</a>
 
 If you'd like to contribute to this project, please feel 
 free to submit a pull request. 
 However, please note that this is a sample project 
 meant to demonstrate how to use PHP, HTML, and SQL together.
 
-## License
+## <a href="#" class="button big">License</a>
 
 This project is licensed under the MIT License. 
 See the LICENSE file for more information.
 
-## <a href="#" class="button">SERVER-SIDE CA</a>
-<input class="button" type="submit" value="Post comment (input)">
-<button class="button" type="submit">Post comment (button)</button>
+<style>
+  .text-green {
+    color: #F8E089;
+  }
+  .button-motion {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    background-color: blue;
+    border: none;
+    border-radius: 5px;
+    animation: button-pulse 1s ease-in-out infinite;
+  }
+  @keyframes button-pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+</style>
+
+<button class="button-motion">
+  <p class="text-green">ABIELINSKY</p>
+</button>
