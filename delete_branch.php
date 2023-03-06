@@ -10,7 +10,7 @@ if (!$branch_id) {
 }
 
 // Delete the branch from the database
-$query = 'DELETE FROM branch WHERE Branch_Id = :branch_id';
+$query = 'DELETE FROM Branch WHERE Branch_Id = :branch_id';
 $statement = $db->prepare($query);
 $statement->bindValue(':branch_id', $branch_id);
 $success = $statement->execute();

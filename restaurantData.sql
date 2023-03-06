@@ -68,7 +68,7 @@ INSERT INTO OrderDetails (OrderID, ItemID, Quantity) VALUES
 
 
 
-create table Branch ( Branch_Id   int NOT NULL AUTO_INCREMENT,
+create table branch ( Branch_Id   int NOT NULL AUTO_INCREMENT,
 					  Branch_Name     VARCHAR(50),
 					  Manager_Name    VARCHAR(100),
 					  Telephone       VARCHAR(15),
@@ -80,7 +80,7 @@ create table Branch ( Branch_Id   int NOT NULL AUTO_INCREMENT,
 PRIMARY KEY (Branch_Id));
 
 
-INSERT INTO Branch VALUES 
+INSERT INTO branch VALUES
 ('1',  'KFC Jervis',           'Jack Black',     '894148673','125 Abbey Street Upper', 	'North Dublin',     'Co. Dublin',  'D01 W3X5',     '2020/08/11'),
 ('2',  'KFC Applegreen',       'Ryan Gosling',   '894149241','Demsesne',	        	'Dundalk',		    'Co. Louth',   'A94 R178',     '2021/10/12'),
 ('3',  'KFC Dundalk Road',     'Amy Winehous',   '894149809','Dundalk Rd', 				'Drogheda', 	    'Co. Louth',   'A42 A241',     '2020/10/13'),
