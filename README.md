@@ -34,9 +34,16 @@ responsive and work well on mobile devices.
 
 This project uses the following technologies:
 
-- PHP: Used to handle server-side logic and database interactions.
-- HTML/CSS: Used to create the user interface.
-- MySQL: Used to store data tables information.
+<a href="#" class="button danger">Delete post</a>
+
+
+
+
+
+
+- [![View PHP](https://img.shields.io/badge/PHP:-blue.svg)]() Used to handle server-side logic and database interactions.
+- [![View PHP](https://img.shields.io/badge/HTML/CSS:-blue.svg)]() Used to create the user interface.
+- [![View PHP](https://img.shields.io/badge/MySQL:-blue.svg)]() Used to store data tables information.
 
 ## Contributing
 
