@@ -34,11 +34,6 @@ responsive and work well on mobile devices.
 
 This project uses the following technologies:
 
-<a href="#" class="button danger">Delete post</a>
-
-
-
-
 
 
 - [![View PHP](https://img.shields.io/badge/PHP:-blue.svg)]() Used to handle server-side logic and database interactions.
