@@ -63,7 +63,7 @@ See the LICENSE file for more information.
     font-weight: bold;
     text-align: center;
     color: white;
-    background-color: blue;
+    background-color: #589cf5;
     border: none;
     border-radius: 5px;
     animation: button-pulse 1s ease-in-out infinite;
