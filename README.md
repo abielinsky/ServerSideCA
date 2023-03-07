@@ -51,38 +51,3 @@ meant to demonstrate how to use PHP, HTML, and SQL together.
 
 This project is licensed under the MIT License. 
 See the LICENSE file for more information.
-
-<style>
-  .text-green {
-    color: #F8E089;
-  }
-  .button-motion {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    text-align: center;
-    color: white;
-    background-color: #589cf5;
-    border: none;
-    border-radius: 5px;
-    animation: button-pulse 1s ease-in-out infinite;
-  }
-  @keyframes button-pulse {
-    0% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.05);
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
-</style>
-
-<button class="button-motion">
-  <p class="text-green">ABIELINSKY</p>
-</button>
-
-

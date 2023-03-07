@@ -1,74 +1,207 @@
-/* Base table styles */
+
+
+/*====================================================================================================*/
+
+
+
+
+
+
 table {
+
     border-collapse: collapse;
     width: 100%;
     font-size: 14px;
   }
-  
+
+
   th,
   td {
     text-align: left;
     padding: 8px;
     border-bottom: 1px solid #ddd;
   }
-  
+
+
   th {
-    background-color: #4caf50;
+    background-color: black;
     color: white;
   }
-  
+
   tr:nth-child(even) {
     background-color: #f2f2f2;
   }
-  
+
   tr:hover {
     background-color: #ddd;
   }
-  
-  /* Responsive table styles */
-  @media screen and (max-width: 767px) {
+
+/* Responsive table styles */
+@media screen and (max-width: 767px) {
     table {
-      border-collapse: collapse;
-      width: 100%;
-      margin-bottom: 20px;
+        border-collapse: collapse;
+        width: 100%;
+        margin-bottom: 20px;
     }
-  
+
     thead {
-      display: none;
+        display: none;
+        visibility: hidden;
+        text-align: left;
     }
-  
+
     tbody {
-      display: block;
+        display: block;
     }
-  
+
     tr {
-      display: block;
-      margin-bottom: 10px;
-      border: 1px solid #ccc;
+        display: block;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
     }
-  
+
     td {
-      display: block;
-      text-align: center;
-      font-size: 14px;
-      border-bottom: 1px solid #ddd;
-      position: relative;
-      padding-left: 50%;
+        display: block;
+        text-align: center;
+        font-size: 1rem;
+        border-bottom: 1px solid #ddd;
+        position: relative;
+        padding: 1rem 0 1rem 50%;
+        box-sizing: border-box;
     }
-  
+
     td:before {
-      content: attr(data-label);
-      position: absolute;
-      left: 0;
-      width: 50%;
-      padding-left: 8px;
-      font-weight: bold;
-      text-transform: uppercase;
-      text-align: left;
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 8px;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-align: left;
     }
-  
+
     td:last-child {
-      border-bottom: none;
+        border-bottom: none;
     }
-  }
-  
+
+    td:not(:last-child) {
+        text-align: left;
+    }
+}
+
+
+
+/* =================================================================================================== */
+.containerForm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    background-color: rgba(12, 12, 12, 0.62);
+    padding: 15px;
+    color: white;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 10px;
+    box-shadow: 0px 1px 3px rgba(96, 91, 90, 0.7);
+}
+
+select {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 10px;
+    box-shadow: 0px 1px 3px rgba(96, 91, 90, 0.7);
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+input[type="submit"] {
+    display: block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #3e8e41;
+}
+
+input[type="submit"]:active {
+    background-color: #3e8e41;
+    transform: translateY(1px);
+}
+
+input[type="file"] {
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    label {
+        font-size: 16px;
+    }
+
+    input[type="submit"] {
+        font-size: 16px;
+    }
+}
+
+
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="tel"]:hover,
+textarea:hover,
+select:hover {
+    box-shadow: 0px 1px 5px rgba(245, 245, 245, 0.3);
+}
+
+@media screen and (max-width: 768px) {
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    label {
+        font-size: 16px;
+    }
+
+    input[type="submit"] {
+        font-size: 16px;
+    }
+}
+
+
