@@ -3,11 +3,18 @@
 
 <main class="containerForm">
 
-    <div class="starter-template text-center">
+    <div class="contactUs">
 
-      <h1>CONTACT US</h1>
+        <div class = "title">
+        <h1>CONTACT US</h1>
+        </div>
 
 
+
+        <div class="box">
+
+
+        <div class="contact form">
         <form method="POST" name="contactform" action="contact-form-handler.php">
 
         <div>
@@ -17,12 +24,12 @@
         </p>
         </div>
 
-            <div>
+        <div>
             <p>
             <label for="birthdate">Birthdate:</label> <br>
             <input type="date" id="birthdate" name="birthdate" required><br><br>
             </p>
-            </div>
+        </div>
 
         <div>
         <p>
@@ -42,7 +49,6 @@
             <input type="text" name="email" required><br><br>
         </p>
         </div>
-
 
         <div>
         <p>
@@ -103,9 +109,20 @@
 
         <input type="submit" value="Submit"> <br>
         </form>
+        </div>
+
+        <div class="contact info">
+        </div>
+
+        <div class="contact map">
+        </div>
 
 
-  </div>
+
+        </div>
+
+
+    </div>
 
 </main><!-- /.container -->
 
