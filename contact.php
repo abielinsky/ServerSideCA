@@ -1,5 +1,6 @@
 <?php include 'includes/header.php'; ?>
 
+<body>
 
     <main class="containerForm">
 
@@ -159,3 +160,5 @@
 
 
 <?php include 'includes/footer.php'; ?>
+
+</body>
