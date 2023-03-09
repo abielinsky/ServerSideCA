@@ -16,63 +16,85 @@ $statement->closeCursor();
 
 <body>
 
-<div class="containerAll" >
+<div class="containerAll" style="margin-bottom: 0px">
 
 <!--    -->
 
 <div class="containerTable" style="width:1000px; margin:0 auto; " >
 
+    <style>
+        header {
+            text-align: left;
+        }
+
+        .my-heading {
+            text-align: center;
+        }
+
+        @media only screen and (max-width: 500px) {
+            header {
+                text-align: left;
+            }
+
+            .my-heading {
+                text-align: left;
+            }
+        }
+    </style>
+
+
     <header>
-        <h1>Branch Manager</h1>
+        <h1 class="my-heading">KFC Chicken</h1>
     </header>
 
     <div class="starter-template text-center">
-        <h1>Bootstrap starter template</h1>
-        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
+        <h1 class="my-heading">KFC Restaurants, IRELAND</h1>
+        <p class="my-heading" class="lead">You can consult here the restaurants you are looking for<br>
+           For reservation Contact us and enjoy of our offers </p> <br>
     </div>
 
-    <h1>Branch List</h1>
 
 
-    <div class="tabla-desktop" style="align-content: center">
-<!--          <section>-->
-              <!-- display a table-->
-              <table>
-                  <tr>
-                      <th>ID</th>
-                      <th>Name</th>
-                      <th>Manager</th>
-                      <th>Telephone</th>
-                      <th>Address</th>
-                      <th>Established</th>
-<!--                      <th>Delete</th>-->
-                  </tr>
 
-                  <?php foreach ($branches as $branch) : ?>
-                      <tr>
-                          <td><?php echo $branch['Branch_Id']; ?></td>
-                          <td><?php echo $branch['Branch_Name']; ?></td>
-                          <td><?php echo $branch['Manager_Name']; ?></td>
-                          <td><?php echo $branch['Telephone']; ?></td>
-                          <td><?php echo $branch['Address_Line1'] . ', ' . $branch['Address_Line2'] . ', ' . $branch['Address_Line3'] . ', ' . $branch['Eircode']; ?></td>
-                          <td><?php echo $branch['Established']; ?></td>
-<!--                          <td>-->
-<!--                              <form action="delete_branch.php" method="post">-->
-<!--                                  <input type="hidden" name="branch_id"-->
-<!--                                         value="--><?php //echo $branch['Branch_Id']; ?><!--">-->
-<!--                                  <input type="submit" value="Delete">-->
-<!--                              </form>-->
-<!--                          </td>-->
+                <div class="tabla-desktop" style="align-content: center">
+            <!--          <section>-->
+                          <!-- display a table-->
+                          <table>
+                              <tr>
+                                  <th class="my-heading" >ID</th>
+                                  <th class="my-heading" >Name</th>
+                                  <th class="my-heading" >Manager</th>
+                                  <th class="my-heading" >Telephone</th>
+                                  <th class="my-heading" >Address</th>
+                                  <th class="my-heading" >Established</th>
+            <!--                      <th>Delete</th>-->
+                              </tr>
 
-                      </tr>
-                  <?php endforeach; ?>
-              </table>
-              <!-- display a table-->
-<!--          </section>-->
+                              <?php foreach ($branches as $branch) : ?>
+                                  <tr>
+                                      <td><?php echo $branch['Branch_Id']; ?></td>
+                                      <td><?php echo $branch['Branch_Name']; ?></td>
+                                      <td><?php echo $branch['Manager_Name']; ?></td>
+                                      <td><?php echo $branch['Telephone']; ?></td>
+                                      <td><?php echo $branch['Address_Line1'] . ', ' . $branch['Address_Line2'] . ', ' . $branch['Address_Line3'] . ', ' . $branch['Eircode']; ?></td>
+                                      <td><?php echo $branch['Established']; ?></td>
+            <!--                          <td>-->
+            <!--                              <form action="delete_branch.php" method="post">-->
+            <!--                                  <input type="hidden" name="branch_id"-->
+            <!--                                         value="--><?php //echo $branch['Branch_Id']; ?><!--">-->
+            <!--                                  <input type="submit" value="Delete">-->
+            <!--                              </form>-->
+            <!--                          </td>-->
 
-    </div>
+                                  </tr>
+                              <?php endforeach; ?>
+                          </table>
+                          <!-- display a table-->
+            <!--          </section>-->
 
-</div><!-- /.container table -->
+                </div>
+
+    </div><!-- /.container table -->
 
 
 </div>

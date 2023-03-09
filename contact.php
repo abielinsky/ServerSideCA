@@ -1,8 +1,11 @@
 <?php include 'includes/header.php'; ?>
 
-<body>
 
-    <main class="containerForm">
+<body >
+
+
+    <main class="containerForm" STYLE="height: 1200px"  style="margin-bottom: 0px">
+        <script src="JavaScript/formvalidation.js" type="text/javascript"></script>
 
         <div class="contactUs">
 
@@ -19,7 +22,7 @@
 
                     <h3>Send a Message</h3>
 
-                    <form method="POST" name="contactform" action="contact-form-handler.php">
+                    <form onsubmit="return  validateForm(); " method="POST" name="contactform" id="contactform" action="contact-form-handler.php">
                         <div class="formBox">
 
 
@@ -30,7 +33,7 @@
                                 </div>
                                 <div class="inputBox">
                                     <label for="birthdate">Birthdate:</label>
-                                    <input type="date" id="birthdate" name="birthdate" required>
+                                    <input type="date" id="birthdate" name="birthdate" placeholder="Birthdate" required>
                                 </div>
                             </div>
 
