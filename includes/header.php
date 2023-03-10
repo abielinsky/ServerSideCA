@@ -11,15 +11,35 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="mystyle.css" rel="stylesheet">
+
+    <style>
+        /* Navigation bar hover effect */
+        .navbar-nav li a:hover {
+            background-color: #ec5565;
+            color: #fff;
+            border-radius: 5px;
+            transition: all 0.3s ease-in-out;
+            padding: 10px 30px 10px 30px;
+        }
+
+        .navbar-brand:hover {
+            background-color: #ec5565;
+            color: #fff;
+            border-radius: 5px;
+            transition: all 0.3s ease-in-out;
+            padding: 10px 20px 10px 20px;
+        }
+    </style>
+
 </head>
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Eighth navbar example">
+
     <div class="container">
         <a class="navbar-brand" href="index.php">MAIN</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+
+
 
         <div class="collapse navbar-collapse" id="navbarsExample07">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -43,4 +63,6 @@
           </span>
         </div>
     </div>
+
+
 </nav>

@@ -23,24 +23,20 @@ $statement->closeCursor();
 <div class="containerTable" style="width:1000px; margin:0 auto; " >
 
     <style>
-        header {
-            text-align: left;
-        }
 
-        .my-heading {
-            text-align: center;
-        }
-
-        @media only screen and (max-width: 500px) {
-            header {
-                text-align: left;
-            }
-
+        /* Media query for small screens */
+        @media (max-width: 576px) {
             .my-heading {
-                text-align: left;
+                font-size:14px;
+                align: left;
+
+
             }
         }
+
     </style>
+
+    <div class="allText">
 
 
     <header>
@@ -53,7 +49,7 @@ $statement->closeCursor();
            For reservation Contact us and enjoy of our offers </p> <br>
     </div>
 
-
+    </div>
 
 
                 <div class="tabla-desktop" style="align-content: center">
