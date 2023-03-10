@@ -13,22 +13,7 @@
     <link href="mystyle.css" rel="stylesheet">
 
     <style>
-        /* Navigation bar hover effect */
-        .navbar-nav li a:hover {
-            background-color: #ec5565;
-            color: #fff;
-            border-radius: 5px;
-            transition: all 0.3s ease-in-out;
-            padding: 10px 30px 10px 30px;
-        }
 
-        .navbar-brand:hover {
-            background-color: #ec5565;
-            color: #fff;
-            border-radius: 5px;
-            transition: all 0.3s ease-in-out;
-            padding: 10px 20px 10px 20px;
-        }
     </style>
 
 </head>
@@ -37,7 +22,8 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Eighth navbar example">
 
     <div class="container">
-        <a class="navbar-brand" href="index.php">MAIN</a>
+
+
 
 
 
@@ -46,22 +32,27 @@
             </ul>
             <span class="d-flex">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="page-1.php">Restaurants</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="page-2.php">Page 2</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="page-3.php">Page 3</a>
-              </li>
+             <li class="nav-item">
+             <a class="nav-link"  class="navbar-brand" href="index.php">MAIN</a>
                 </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="page-1.php">RESTAURANTS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="page-2.php">FOOD</a>
+              </li>
+<!--              <li class="nav-item">-->
+<!--                <a class="nav-link" aria-current="page" href="page-3.php">Page 3</a>-->
+<!--              </li>-->
+<!--                </li>-->
                 <li class="nav-item">
                 <a class="nav-link" aria-current="page" href="contact.php">CONTACT</a>
                 </li>
             </ul>
           </span>
         </div>
+
+
     </div>
 
 

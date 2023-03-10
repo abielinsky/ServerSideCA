@@ -148,9 +148,9 @@ p {
 
 
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
     .footer{
-        display: none;
+        display: none;  /* this is to display none the effect of bubbles when is responsive.*/
     }
 
     .content {
@@ -161,9 +161,22 @@ p {
         justify-content: flex-end;
         height: 100%;
     }
+
+
+    .bubbles {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 1rem;
+        background: var(--footer-background);
+        filter: url("#blob");
+        width: 90%;
+    }
+
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
     .image {
         width: 3rem;
         height: 3rem;
@@ -178,7 +191,7 @@ p {
 /*table*/
 
 /* Media Query Breakpoints */
-@media screen and (max-width: 600PX) { /* up to 360px */
+@media screen and (max-width: 768PX) { /* up to 360px */
     table {
         display: flex;
     }
@@ -281,7 +294,7 @@ p {
         background-color: #ddd;
     }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 768px) {
     .tabla-desktop {
         font-size: 0.8em;
     }
@@ -302,6 +315,8 @@ p {
 /* =================================================================================================== */
 /* =================================================================================================== */
 /*FORM - CONTACT US*/
+
+
 
 .contactUs{
     background: linear-gradient(#212529 0%, rgb(245, 164, 164) 30%, #f2a2a2 30%, #202428 100%);
@@ -427,6 +442,9 @@ p {
     margin-bottom: 4px;
 }
 
+
+/*================================= FOR THE MENU HEADERS ===================================================*/
+
 .inputBox input[type="submit"] {
     background: #f55656;
     color: #212529;
@@ -448,11 +466,41 @@ p {
     border-radius: 40%;
 }
 
+/* Navigation bar hover effect /////////////////////////////////////////////////////////////////// */
+
+@media (max-width: 768px) {
+    .collapse.navbar-collapse {
+        display: block !important;
+    }
+
+    .collapse.navbar-collapse ul.navbar-nav {
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+    }
+
+    .collapse.navbar-collapse ul.navbar-nav li {
+        margin: 5px 0;
+    }
+
+    .d-flex {
+        display: none;
+    }
+}
+
+
+
+
+/* =============================================================================================== */
 
 .inputBox ::placeholder
 {
     color: rgba(128, 127, 127, 0.65);
 }
+
+
+
+
 
 /* =================================================================================================== */
 
@@ -547,12 +595,12 @@ p {
 /*/* Responsive Design */
 
 
-    @media (max-width: 500px)
+    @media (max-width: 768px)
     {
         body
         {
-            background: #f55656;
-
+            /*background: #f55656;*/
+            background: linear-gradient(#212529 0%, rgb(245, 242, 245) 30%, #f5f2f5 30%, #202428 100%);
         }
 
         .contactUs
@@ -604,46 +652,209 @@ p {
 
 /*MAIN INDEX*/
 
+.mainIndex {
+    background: linear-gradient(#212529 0%, rgb(245, 242, 245) 30%, #f5f2f5 30%, #202428 100%);
+    height: 1000px;
 
-.mainIndex
-{
-    background: linear-gradient(#212529 0%, rgb(245, 164, 164) 30%, #f2a2a2 30%, #202428 100%);
-    height: 800px;
+    min-height: 100vh;
 }
 
-img{
+
+img {
     transition: all 0.5s linear;
 }
 
-img:hover{
-    transform: scale(0.9);
+img:hover {
+    transform: scale(0.8);
 }
 
 .BrotherBear {
-    width: 25%;
+    /*width: 25%;*/
+    /*margin-left: auto;*/
+    /*margin-right: auto;*/
+    /*display: flex;*/
+    /*border-style: solid;*/
+    /*cursor: pointer;*/
+
+    width: 100%;
+    max-width: 400px;
     margin-left: auto;
     margin-right: auto;
-    display: block;
+    display: flex;
     border-style: solid;
     cursor: pointer;
-    /*padding-top: 10px;    separator*/
+
 }
 
-.separator1{
+.separator1 {
     height: 10px;
 }
 
 .flex {
     width: 100%;
     padding: 2px;
+    justify-content: space-between;
+    align-items: flex-start;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: flex-start;
 }
+
+
+/* add this to style the image name */
+.flex div p {
+    font-size: 14px;
+    margin-top: 5px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+}
+
+/* Style for the heading */
+
+
+/* Style for the paragraph */
+.lead {
+    font-size: 24px;
+    color: #fcf7f7;
+    /*margin-bottom: 40px;*/
+}
+
+
+/* Style for the image container */
+.flex div {
+    /*width: 30%;*/
+    /*margin-bottom: 40px;*/
+    /*position: relative;*/
+
+    /*padding: 0px 10px 0px 10px;*/
+
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+    position: relative;
+}
+
+/* Style for the image */
 .flex img {
-    margin: 35px;
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
 }
+
+/* Style for the image caption */
+.flex p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #f6f1f1;
+    background-color: rgba(0, 0, 0, 0.6);
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+/* Style for the image caption on hover */
+.flex div:hover p {
+    opacity: 8;
+    color: #f5f2f5;
+}
+
+
+@media screen and (min-width: 768px) {
+    .BrotherBear {
+        max-width: 600px;
+    }
+
+    .flex div {
+        width: 48%;
+        margin: 20px 1%;
+    }
+
+    .mainIndex {
+        background: linear-gradient(#212529 0%, rgb(245, 242, 245) 30%, #f5f2f5 30%, #202428 100%);
+        /*height: auto;*/
+
+        min-height: 100vh;
+    }
+
+}
+
+@media screen and (min-width: 768px) {
+    .flex div {
+        width: 31.33%;
+        margin: 20px 1%;
+    }
+}
+
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.inputBox {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type=" "],
+input[type=" "] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #ccc;
+    font-size: 16px;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus {
+    outline: #00298f;
+    border-color: #002d8f;
+
+}
+
+input:invalid {
+    border: 2px solid red;
+}
+
+datalist:invalid {
+    border: 2px solid red;
+}
+
+select:invalid {
+    border: 2px solid red;
+}
+
+.textarea:invalid {
+    border: 2px solid red;
+}
+
+datalist:invalid {
+    border: 2px solid red;
+}
+
+.label1:invalid {
+    border: 2px solid red;
+}
+
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+.containerTable{
+    background: linear-gradient(#212529 0%, rgb(245, 164, 164) 30%, #f2a2a2 30%, #202428 100%);
+}
+
+
+
 
 
 

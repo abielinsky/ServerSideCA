@@ -4,7 +4,7 @@ require_once('database.php');
 
 
 // Get branches
-$queryBranches = 'SELECT * FROM branch';
+$queryBranches = 'SELECT * FROM kfc_menu';
 $statement = $db->prepare($queryBranches);
 $statement->execute();
 $branches = $statement->fetchAll();
@@ -14,59 +14,100 @@ $statement->closeCursor();
 
 <?php include 'includes/header.php'; ?>
 
-    <main class="containerTable">
+<body >
 
-        <header>
-            <h1>Branch Manager</h1>
-        </header>
 
-        <div class="starter-template text-center">
-            <h1>Bootstrap starter template</h1>
-            <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
+
+
+
+
+    <main class="containerTable" style="height: 1100px">
+
+        <div class="allText">
+
+
+            <header>
+                <h1  class="my-heading">KFC Chicken</h1>
+            </header>
+
+            <div class="starter-template text-center">
+                <h1 class="my-heading">KFC Restaurants, IRELAND</h1>
+                <p class="my-heading" class="lead">You can consult here for Discounts<br>
+                    For reservation Contact us and enjoy of our offers </p> <br>
+            </div>
+
         </div>
 
-        <h1>Branch List</h1>
 
+        <div class="box">
 
-        <div class="tabla-desktop">
-            <!--          <section>-->
-            <!-- display a table-->
+        <div class="tabla-desktop" style="padding-left: 20%">
+
             <table>
                 <tr>
                     <th>ID</th>
                     <th>Name</th>
-                    <th>Manager</th>
-                    <th>Telephone</th>
-                    <th>Address</th>
-                    <th>Established</th>
-                    <th>Delete</th>
+                    <th>Category</th>
+                    <th>Price</th>
+                    <th>Calories</th>
+                    <th>Allergens</th>
+
                 </tr>
 
                 <?php foreach ($branches as $branch) : ?>
                     <tr>
-                        <td><?php echo $branch['Branch_Id']; ?></td>
-                        <td><?php echo $branch['Branch_Name']; ?></td>
-                        <td><?php echo $branch['Manager_Name']; ?></td>
-                        <td><?php echo $branch['Telephone']; ?></td>
-                        <td><?php echo $branch['Address_Line1'] . ', ' . $branch['Address_Line2'] . ', ' . $branch['Address_Line3'] . ', ' . $branch['Eircode']; ?></td>
-                        <td><?php echo $branch['Established']; ?></td>
-<!--                        <td>-->
-<!--                            <form action="delete_branch.php" method="post">-->
-<!--                                <input type="hidden" name="branch_id"-->
-<!--                                       value="--><?php //echo $branch['Branch_Id']; ?><!--">-->
-<!--                                <input type="submit" value="Delete">-->
-<!--                            </form>-->
-<!--                        </td>-->
+                        <td><?php echo $branch['item_id']; ?></td>
+                        <td><?php echo $branch['item_name']; ?></td>
+                        <td><?php echo $branch['category']; ?></td>
+                        <td><?php echo $branch['price']; ?></td>
+                        <td><?php echo $branch['calories']; ?></td>
+                        <td><?php echo $branch['allergens']; ?></td>
+
 
                     </tr>
                 <?php endforeach; ?>
             </table>
-            <!-- display a table-->
-            <!--          </section>-->
 
         </div>
 
+        <div class="calculations">
+
+            <form action="display_discount.php" method="post" >
+
+                <div id="data">
+                    <label>Product Name:</label>
+                    <input type="text" name="product_name" required><br>
+
+                    <label>List Price:</label>
+                    <input type="text" name="list_price" required><br>
+
+                    <label>Discount Percent:</label>
+                    <input type="text" name="discount_percent" required><span>%</span><br>
+
+                    <label>How many People:</label>
+                    <input type="text" name="description" required><br>
+
+                    <label>Quantity Menus:</label>
+                    <input type="text" name="quantity" required><br>
+
+
+
+                </div>
+
+                <div id="buttons">
+                    <label>&nbsp;</label>
+                    <input type="submit" value="Calculate Discount"><br>
+                </div>
+
+            </form>
+
+        </div>
+
+
+    </div>
+
+
     </main><!-- /.container -->
 
-
+</body>
 <?php include 'includes/footer.php'; ?>

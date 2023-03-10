@@ -5,7 +5,7 @@
 
 
     <main class="containerForm" STYLE="height: 1200px"  style="margin-bottom: 0px">
-        <script src="JavaScript/formvalidation.js" type="text/javascript"></script>
+        <script src="Validations.js" type="text/javascript"></script>
 
         <div class="contactUs">
 
@@ -48,7 +48,7 @@
                                     </select>
                                 </div>
                                 <div class="inputBox">
-                                    <label for='email'>Email Address:</label>
+                                    <label  for='email'>Email Address:</label>
                                     <input type="text" name="email" required>
                                 </div>
                             </div>
@@ -61,7 +61,7 @@
                                 </div>
                                 <div class="inputBox">
                                     <label for="country">Country:</label>
-                                    <input type="text" id="country" name="country" list="country-list">
+                                    <input type="text" id="country" name="country" required list="country-list">
                                     <datalist id="country-list">
                                         <option value="Ireland">
                                         <option value="Canada">
