@@ -23,7 +23,7 @@
           <div class="starter-template text-center">
               <h1 class="my-heading2">Thank you</h1>
               <h1 class="my-heading2">We will Contact you Soon</h1>
-              <p class="my-heading2" class="lead">Your Reservation have been saved<br>
+              <p class="my-heading2" class="lead">Your message have been sent<br>
                   We will be happy to have you here</p>
           </div>
 
