@@ -132,10 +132,10 @@
                         </div>
                         <!-- Social Media Links -->
                         <ul class="sci">
-                            <li><a href="#"> <ion-icon name="logo-facebook"></ion-icon> </a></li>
-                            <li><a href="#"> <ion-icon name="logo-twitter"></ion-icon> </a></li>
-                            <li><a href="#"> <ion-icon name="logo-instagram"></ion-icon> </a></li>
-                            <li><a href="#"> <ion-icon name="logo-linkedin"></ion-icon> </a></li>
+                            <li><a href="https://www.facebook.com/"> <ion-icon name="logo-facebook"></ion-icon> </a></li>
+                            <li><a href="https://twitter.com/"> <ion-icon name="logo-twitter"></ion-icon> </a></li>
+                            <li><a href="https://www.instagram.com/"> <ion-icon name="logo-instagram"></ion-icon> </a></li>
+                            <li><a href="https://ie.linkedin.com/"> <ion-icon name="logo-linkedin"></ion-icon> </a></li>
                         </ul>
 
                     </div>

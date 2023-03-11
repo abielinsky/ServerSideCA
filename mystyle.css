@@ -821,6 +821,8 @@ input[type="date"]:focus {
 
 }
 
+
+
 input:invalid {
     border: 2px solid red;
 }
@@ -846,10 +848,34 @@ datalist:invalid {
 }
 
 
+
+
+input:valid {
+    border: 2px solid #35e318;
+}
+
+datalist:valid {
+    border: 2px solid #35e318;
+}
+
+select:valid {
+    border: 2px solid #35e318;
+}
+
+.textarea:valid {
+    border: 2px solid #35e318;
+}
+
+datalist:valid {
+    border: 2px solid #35e318;
+}
+
+
+
 /*/////////////////////////////////////////////////////////////////////////////////////////////////*/
 
 
-.containerTable{
+.containerTable2{
     background: linear-gradient(#212529 0%, rgb(245, 164, 164) 30%, #f2a2a2 30%, #202428 100%);
 }
 
