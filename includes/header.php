@@ -23,7 +23,34 @@
 
     <div class="container">
 
+        <style>
+            .navbar-nav li a {
+                padding: 5px 5px;
+                border-radius: 30px;
+                transition: all 0.3s ease;
+                background-color: rgba(245, 21, 22, 0);
+                color: #111111;
+                display: inline-block;
+                width: 150px;
+                text-align: center;
+            }
 
+            .navbar-nav li a:hover {
+                background-color: #fd0001;
+                color: #f51516;
+            }
+            @media (max-width: 767px) {
+                .navbar-nav {
+                    align: center;
+                }
+
+                .navbar-nav li {
+                    display: inline-block;
+                    float: none;
+                }
+            }
+
+        </style>
 
 
 

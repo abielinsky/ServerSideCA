@@ -16,11 +16,6 @@ $statement->closeCursor();
 
 <body >
 
-
-
-
-
-
     <main class="containerTable2" style="height: 1300px">
 
         <div class="allText">
@@ -112,4 +107,5 @@ $statement->closeCursor();
     </main><!-- /.container -->
 
 </body>
+
 <?php include 'includes/footer.php'; ?>
