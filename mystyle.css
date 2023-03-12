@@ -880,6 +880,33 @@ datalist:valid {
 }
 
 
+.box2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.tabla-desktop2 {
+    margin: 0 auto;
+    width: 60%; /* adjust this value as needed */
+    border-collapse: collapse;
+/
+}
+
+.tabla-desktop2 th {
+    background-color: #bdbfbf;
+    font-weight: bold;
+
+    text-align: center;
+}
+
+.tabla-desktop2 td {
+
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
 
 
 

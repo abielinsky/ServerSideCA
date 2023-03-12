@@ -16,7 +16,7 @@ $statement->closeCursor();
 
 <body>
 
-<main class="containerTable2" style="height: 1300px">
+<main class="containerTable2" style="height: 850px">
 
     <div class="allText">
 
@@ -34,9 +34,10 @@ $statement->closeCursor();
     </div>
 
 
-    <div class="box1">
 
-        <div class="tabla-desktop" style="padding-left: 10%">
+    <div class="box2">
+
+        <div class="tabla-desktop2" >
 
             <table>
                 <tr>

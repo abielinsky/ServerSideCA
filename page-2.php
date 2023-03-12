@@ -16,7 +16,7 @@ $statement->closeCursor();
 
 <body >
 
-    <main class="containerTable2" style="height: 1300px">
+    <main class="containerTable2" style="height: 1100px">
 
         <div class="allText">
 
