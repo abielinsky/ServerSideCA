@@ -1,47 +1,23 @@
 
-    const form = document.querySelector('form');
-    form.addEventListener('submit', (event) => {
-    event.preventDefault();
-    const productName = document.querySelector('input[name="product_name"]');
-    const listPrice = document.querySelector('input[name="list_price"]');
-    const discountPercent = document.querySelector('input[name="discount_percent"]');
-    const description = document.querySelector('input[name="description"]');
-    const quantity = document.querySelector('input[name="quantity"]');
+//user name validation starts
+function username_validation(){
+    'use strict';
+    var username_name = document.getElementById("name");
+    var username_value = document.getElementById("username").value;
+    var username_length = username_value.length;
+    var letters = /^[0-9a-zA-Z]+$/;
+    if(username_length < 4 || !username_value.match(letters))
+    {
+        document.getElementById('name_err').innerHTML = 'Username must be 4 chracters long and alphanuric chracters only.';
+        username_name.focus();
+        document.getElementById('name_err').style.color = "#FF0000";
+    }
+    else
+    {
+        document.getElementById('name_err').innerHTML = 'Valid username';
+        document.getElementById('name_err').style.color = "#00AF33";
+    }
+}
+//user name validation ends
 
-    // Validate input fields
-    let isValid = true;
-    if (!productName.value.trim()) {
-    isValid = false;
-    alert('Please enter a product name.');
-}
-    if (!listPrice.value.trim()) {
-    isValid = false;
-    alert('Please enter a list price.');
-} else if (isNaN(listPrice.value)) {
-    isValid = false;
-    alert('List price must be a number.');
-}
-    if (!discountPercent.value.trim()) {
-    isValid = false;
-    alert('Please enter a discount percent.');
-} else if (isNaN(discountPercent.value)) {
-    isValid = false;
-    alert('Discount percent must be a number.');
-}
-    if (!description.value.trim()) {
-    isValid = false;
-    alert('Please enter a description.');
-}
-    if (!quantity.value.trim()) {
-    isValid = false;
-    alert('Please enter a quantity.');
-} else if (isNaN(quantity.value)) {
-    isValid = false;
-    alert('Quantity must be a number.');
-}
-
-    if (isValid) {
-    form.submit();
-}
-});
 

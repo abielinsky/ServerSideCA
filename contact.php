@@ -1,11 +1,15 @@
 <?php include 'includes/header.php'; ?>
 
+<meta name="keywords" content="example, JavaScript Form Validation" />
+<meta name="description" content="This document is an example of JavaScript Form Validation." />
+<script src="Validations.js" ></script>
 
 <body >
 
 
     <main class="containerForm" STYLE="height: 1200px"  style="margin-bottom: 0px">
-        <script src="Validations.js" type="text/javascript"></script>
+
+
 
         <div class="contactUs">
 

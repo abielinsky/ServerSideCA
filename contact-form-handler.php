@@ -41,6 +41,11 @@ if (!preg_match(
     $errors .= "\n Error: Invalid email address";
 }
 
+if (empty($name)) {
+    $errors .= 'Please enter your NAME<br>';
+}
+
+
 if( empty($errors)) {
     $to = $myemail;
     $email_subject = "Contact form submission: $name";
