@@ -1,17 +1,18 @@
+
 <?php
 
 $errors = '';
 $myemail = 'd00251844@student.dkit.ie';// <-----Put your DkIT email address here.
 if(empty($_POST['name'])  ||
-   empty($_POST['email']) ||
-   empty($_POST['phone']) ||
-   empty($_POST['terms']) ||
-   empty($_POST['birthdate']) ||
-   empty($_POST['gender']) ||
-   empty($_POST['country']) ||
-   empty($_POST['datetime']) ||
-   empty($_POST['file']) ||
-   empty($_POST['message']))
+    empty($_POST['email']) ||
+    empty($_POST['phone']) ||
+    empty($_POST['terms']) ||
+    empty($_POST['birthdate']) ||
+    empty($_POST['gender']) ||
+    empty($_POST['country']) ||
+    empty($_POST['datetime']) ||
+    empty($_POST['file']) ||
+    empty($_POST['message']))
 {
     $errors .= "\n Error: all fields are required";
 }
@@ -22,53 +23,98 @@ $headers .= 'From: '.$myemail."\r\n".
     'Reply-To: '.$myemail."\r\n" .
     'X-Mailer: PHP/' . phpversion();
 
-
-$Name = $_POST['name'];
-$Email_address = $_POST['email'];
-$Phone = $_POST['phone'];
-$Message = $_POST['message'];
-$Terms = $_POST['terms'];
-$Birthdate = $_POST['birthdate'];
-$Gender = $_POST['gender'];
-$Country = $_POST['country'];
-$Datetime = $_POST['datetime'];
-$File = $_POST['file'];
+$name = $_POST['name'];
+$email_address = $_POST['email'];
+$phone = $_POST['phone'];
+$terms = $_POST['terms'];
+$birthdate = $_POST['birthdate'];
+$gender = $_POST['gender'];
+$country = $_POST['country'];
+$datetime = $_POST['datetime'];
+$file = $_POST['file'];
+$message = $_POST['message'];
 
 if (!preg_match(
-"/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/i",
-$Email_address))
+    "/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/i",
+    $email_address))
 {
     $errors .= "\n Error: Invalid email address";
 }
 
-if( empty($errors))
-{
-        $to = $myemail;
-        $email_subject = "Contact form submission: $Name";
-        $email_body = "You have received a new message. ".
+if( empty($errors)) {
+    $to = $myemail;
+    $email_subject = "Contact form submission: $name";
+    $email_body = "You have received a new message. " .
 
         " Here are the details:\n  
-        Name: $Name \n         
-        Email: $Email_address \n 
-        
-        Birthdate: $Birthdate \n 
-        Phone: $Phone \n 
-        Terms: $Terms \n 
-        Gender: $Gender \n 
-        Country: $Country \n 
-        Datetime: $Datetime \n 
-        File: $File \n
-        Message: \n $Message";
+        Name: $name \n         
+        Email: $email_address \n 
+        Birthdate: $birthdate \n 
+        Phone: $phone \n 
+        Terms: $terms \n 
+        Gender: $gender \n 
+        Country: $country \n 
+        Datetime: $datetime \n 
+        File: $file \n
+        Message: \n $message";
 
-        mail($to,$email_subject,$email_body,$headers);
+    mail($to, $email_subject, $email_body, $headers);
+
+
+
+
+
+// Insert data into table
+// Change the database credentials according to your setup
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "restaurant";
+
+// Create connection
+    $conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+
+// Prepare and bind the parameters
+    $stmt = $conn->prepare("INSERT INTO messages (name, email, phone, terms, 
+                      birthdate, gender, country, datetime, file, message) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+    $stmt->bind_param("ssssssssss", $name, $email_address, $phone, $terms, $birthdate, $gender, $country, $datetime, $file, $message);
+
+// Execute the query
+    if ($stmt->execute() === TRUE) {
+        // Redirect to the 'thank you' page
+        header('Location: thank-you.php');
+    } else {
+        // Display an error message
+
+
         //redirect to the 'thank you' page
         header('Location: thank-you.php');
+        echo "Error: " . $stmt->error;
+
+        $stmt->close();
+        $conn->close();
+
+        exit();
+    }
+
+
+
+
+
+
+
 }
+
+
 ?>
 <!DOCTYPE HTML>
 <html>
 <head>
-        <title>Contact form handler</title>
+    <title>Contact form handler</title>
 </head>
 
 <body>
@@ -78,4 +124,23 @@ echo nl2br($errors);
 ?>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

@@ -69,4 +69,28 @@ INSERT INTO kfc_menu (item_id, item_name, category, price, calories, allergens) 
 
 
 
+CREATE TABLE messages (
+                          messages_Id int NOT NULL AUTO_INCREMENT,
+                          name VARCHAR(50),
+                          email VARCHAR(100),
+                          phone VARCHAR(15),
+                          terms VARCHAR(200),
+                          birthdate VARCHAR(50),
+                          gender VARCHAR(200),
+                          country VARCHAR(100),
+                          datetime VARCHAR(100),
+                          file VARCHAR(200),
+                          message VARCHAR(500),
+                          PRIMARY KEY (messages_Id)
+);
+
+
+
+
+
+
+
+
+
+
 
