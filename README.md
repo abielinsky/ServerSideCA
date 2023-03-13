@@ -7,6 +7,9 @@ and SQL` together to build a simple web application.
 The application allows users to create and manage tasks using a 
 MySQL database table.
 
+
+![Php, Html, Sql](https://github.com/abielinsky/ServerSideCA/blob/main/Pictures/img.png?raw=true)
+
 ## <a href="#" class="button big">Getting Starter</a>  [![Button 1](https://img.shields.io/badge/%22Getting-Starter%22-blue.svg)](https://example.com/button1 "Tooltip Text")
 
 To get started with this project, you'll need to do the following:
